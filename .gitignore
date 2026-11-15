@@ -7,3 +7,5 @@ __pycache__/
 *.csv
 kaggle.json
 .env
+
+!models/resnet18_model_best.pt

@@ -10,6 +10,6 @@ Kaggle competition code: multimodal model (knee MRI + radiology report text) pre
 
 ## Notes
 - Written for the Kaggle environment (`/kaggle/input`, `/kaggle/working`); competition data is not included.
-- Outputs are stripped; weights and CSVs are git-ignored.
+- Outputs are stripped. CSVs and checkpoints are git-ignored, except `models/resnet18_model_best.pt` (ResNet-18 best weights, 45.7 MB).
 
 Author: S. L. Toriola, MD, MSc.
