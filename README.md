@@ -2,6 +2,8 @@
 
 Kaggle competition code: multimodal model (knee MRI + radiology report text) predicting 12 knee abnormalities.
 
+Entered as a competition and as a learning project in building AI models. Scores stayed near chance, so the repo is best read as a first end-to-end attempt.
+
 ## Goal
 - Predict 12 findings per knee MRI study: ACL, MCL, medial/lateral meniscus, medial/lateral/PF OA, effusion, synovitis, Baker's cyst, contusion, fracture.
 - Metric: macro AUC (0.5 = chance). Top team: 0.942.
@@ -21,6 +23,16 @@ Kaggle competition code: multimodal model (knee MRI + radiology report text) pre
 | Best overall Kaggle score | 0.540 |
 
 All scores are near chance (0.5). Likely causes to investigate: slice sampling (32 evenly spaced slices), per-slice normalization, and labels extracted from report text.
+
+## What I learned
+- Building a full pipeline: DICOM loading, 2D vs 3D inputs, transfer learning, imbalanced-label losses, validation, early stopping, checkpoint resuming.
+- Comparing two architectures on the same task and reading the results honestly.
+- Near-chance AUC points to the data pipeline, not model choice.
+
+## Next steps
+- Sanity checks: overfit a tiny subset, view the model inputs, verify label quality.
+- Revisit slice selection and normalization (currently 32 evenly spaced slices, per-slice scaling).
+- Use the right series per finding instead of pooling all series.
 
 ## Notes
 - Written for the Kaggle environment (`/kaggle/input`, `/kaggle/working`); competition data is not included.
