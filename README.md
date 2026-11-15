@@ -13,3 +13,12 @@ Kaggle competition code: multimodal model (knee MRI + radiology report text) pre
 - Outputs are stripped. CSVs and checkpoints are git-ignored, except `models/resnet18_model_best.pt` (ResNet-18 best weights, 45.7 MB).
 
 Author: S. L. Toriola, MD, MSc.
+
+## Model weights (`models/`)
+- `resnet18_model_best.pt`: ResNet-18 best weights.
+- `mona_tfidf_vectorizer.joblib`: TF-IDF vectorizer for the Mona model.
+- `mona_model_3d_best.pt.part00`, `.part01`: Mona 3D model weights, split to fit GitHub's 100 MB limit. Rejoin from the `models/` folder:
+
+```
+cat mona_model_3d_best.pt.part* > model_3d_best.pt
+```

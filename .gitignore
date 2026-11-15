@@ -10,3 +10,4 @@ kaggle.json
 
 !models/resnet18_model_best.pt
 !models/mona_tfidf_vectorizer.joblib
+!models/mona_model_3d_best.pt.part*
